@@ -37,12 +37,12 @@ const NO_OF_TABS = 2;
 export function ManageBookings() {
 	const windowDimensions = useWindowDimensions();
 
-	const { width, left } = useMemo(() => {
+	const { width, start } = useMemo(() => {
 		const SINGLE_TAB_WIDTH = windowDimensions.width / NO_OF_TABS;
 
 		return {
 			width: SINGLE_TAB_WIDTH * 0.5,
-			left: SINGLE_TAB_WIDTH * 0.25,
+			start: SINGLE_TAB_WIDTH * 0.25,
 		};
 	}, [windowDimensions.width]);
 
@@ -64,7 +64,7 @@ export function ManageBookings() {
 					borderColor: "white",
 					borderBottomWidth: 8,
 					width,
-					left,
+					start,
 					justifyContent: "center",
 					borderTopLeftRadius: 25,
 					borderTopRightRadius: 25,
